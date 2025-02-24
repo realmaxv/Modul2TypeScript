@@ -21,7 +21,7 @@ for(let index: number = 1; index <= 10; index++){
     sumOfNum += index;
   selfConsole(sumOfNum);
   if(index === 10){
-    console.log(`End: ${sumOfNum}`);
+   selfConsole(`End: ${sumOfNum}`);
     
   }
   
@@ -29,6 +29,13 @@ for(let index: number = 1; index <= 10; index++){
   
 }
 
+
+const arr = [1,2,3,4,6,7,89,21];
+
+arr.forEach((num) => {
+  selfConsole("Element meines Arrays: "+num);
+  
+});
 
 
 
