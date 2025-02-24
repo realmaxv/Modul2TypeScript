@@ -202,6 +202,7 @@ button::after{
   font-family: monospace;
   padding: 10px;
   max-height: 4vw;
+  max-width: 5vw;
 
   overflow-y: scroll;
   scroll-behavior: smooth;
