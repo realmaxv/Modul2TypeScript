@@ -194,7 +194,7 @@ button::after{
   align-items: center;
   flex-direction: column;
  justify-content: center;
-
+min-width: 100%;
 
 }
 #consoleOutput {
@@ -203,7 +203,7 @@ button::after{
   font-family: monospace;
   padding: 10px;
   max-height: 45vh;
-  width: 100%;
+ min-width: 100%;
 
   overflow-y: scroll;
   scroll-behavior: smooth;
@@ -221,11 +221,11 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 button:hover::after, button:focus::after{
-  animation: sheen 0.8s forwards;
+  animation: sheen 0.9s forwards;
 }
 @keyframes sheen {
   100% {
-    transform: rotateZ(60deg) translate(1em, -9em);
+    transform: rotateZ(30deg) translate(0.9em, -9em);
   }
 }
 
