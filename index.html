@@ -6,21 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
    
    
-    <title>Vite + TS</title>
+    <title>SuperCode - TypeScript</title>
   </head>
   <body>
 <header>
-  
+  <div class="mainCenter">
+    <h1 class="theme">Modul 2 - Typescript</h1>
+    <h2>Übungen</h2>
+ </div> 
 
 </header>
     <div class="main">
-      <div class="mainCenter">
-         <h1 class="theme">Modul 2 - Typescript</h1>
-         <h2>Übungen</h2>
-      </div> 
+    
+      <div class="log">
+      
+ 
+   
+        <div id="consoleOutput" class="consoleOutput hidden">
 
-      <div class="output hidden"></div>
+
+
+        </div>
+        <div class="output hidden"></div>
+   
+
+
+      </div>
         <ul class="listItems">
+          <li><button id="ts-loops">Loops</button></li>
+
           <li><button disabled id="ts-arrays2">Arrays II</button></li>
           <li><button disabled id="ts-arrays">Arrays I</button></li>
           <li><button disabled id="ts-events">Events</button></li>
@@ -37,7 +51,8 @@
 
 
    
-    <script type="module" src="/src/main.ts"></script>
+    <script type="module" src="./src/main.ts"></script>
+    <script type="module" src="./src/utils/logger.ts"></script>
     
   </body>
 </html>

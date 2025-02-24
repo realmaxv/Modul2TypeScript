@@ -84,6 +84,7 @@ ul li{
   align-items: center;
   justify-content: center;
   gap: 25px;
+  padding: 3vw;
 
   
 }
@@ -104,6 +105,7 @@ ul li{
 
 
 body {
+ 
   animation: fadeInAnimation ease-in-out 1.3s;
   animation-iteration-count: 1;
   animation-fill-mode: both;
@@ -132,7 +134,9 @@ body {
 
 }
 
-
+header{
+  padding: 2vw;
+}
 ul{
   padding: 32px;
   min-width: 40vw;
@@ -148,7 +152,7 @@ ul li{
   flex-direction: column;
   align-items: start;
   gap: 10px;
-  padding-bottom: 32px;
+  padding: 4vw;
   border-bottom:3px solid #888;
   border-radius: 2px;
 }
@@ -183,6 +187,26 @@ button::after{
 
 }
 
+.log{
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+ justify-content: center;
+
+
+}
+#consoleOutput {
+  background: black;
+  color: lime;
+  font-family: monospace;
+  padding: 10px;
+  max-height: 400px;
+
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  border: 1px solid lime;
+}
 
 
 button:hover {
