@@ -21,7 +21,7 @@ for(let index: number = 1; index <= 10; index++){
     sumOfNum += index;
   selfConsole(sumOfNum);
   if(index === 10){
-    console.log(`Endstand: ${sumOfNum}`);
+    console.log(`End: ${sumOfNum}`);
     
   }
   
