@@ -37,8 +37,30 @@ arr.forEach((num) => {
   
 });
 
+selfConsole("");
+const birds = [
+  "Wellensittich",
+  "Rabe",
+  "Maise",
+  "Specht",
+  "🐧",
+  "Drossel",
+  "Amsel",
+  "Tannenhäher",
+  "🐧",
+  "Adler",
+  "Spatz",
+];
 
+let vogele= [];
+for(let i = 0; i < birds.length; i++){
+  if(birds[i] ===  "🐧"){
+   vogele.push(birds[i]);
+    continue;
+  }
+    selfConsole(birds[i], "Gefiltert: ", vogele);
 
+}
 
 
 
