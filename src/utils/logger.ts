@@ -1,7 +1,5 @@
 // src/utils/logger.ts
 const consoleDiv = document.querySelector<HTMLDivElement>(".consoleOutput");
-
-// Funktion zum Loggen in die eigene "Konsole"
 export function selfConsole(...args: any[]) {
     const message = args.map(arg => typeof arg === "object" ? JSON.stringify(arg, null, 2) : arg).join(" ");
     if(consoleDiv){
@@ -16,4 +14,25 @@ export function overrideConsole() {
     console.error = (...args: any[]) => selfConsole("❌ ERROR:", ...args);
     console.warn = (...args: any[]) => selfConsole("🌪️ WARNUNG:", ...args);
 }
+
+
+export function outputTheme(theme: string){
+
+    
+    for(let i = 1; i <=8;i++){
+        if(i === 1){
+            selfConsole("||")
+        }else if(i === 5){
+            selfConsole("---+--- || "+theme+ " ||");
+        }else{
+            selfConsole("---+---");
+
+
+        }
+        
+        
+      }
+      selfConsole("||")
+}
+
 

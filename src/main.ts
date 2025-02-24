@@ -1,4 +1,5 @@
 import './style.css';
+import '../src/utils/logger.ts';
 // import * as FunctionsPartI from './Functions/main.ts';
 // import * as Forms from './Forms/main.ts';
 // import * as EventsOne from './Events/main.ts';
@@ -11,6 +12,11 @@ const consoleDiv = document.querySelector<HTMLDivElement>(".consoleOutput");
 const outputDiv = document.querySelector<HTMLDivElement>('.output');
 const lsEinfuehrung = document.querySelector<HTMLButtonElement>("#ts-Einführung");
 const lsLoops = document.querySelector<HTMLButtonElement>("#ts-loops");
+let fieldsethidden = document.querySelector<HTMLDivElement>(".none");
+
+if(fieldsethidden){
+  fieldsethidden.style.display = "none";
+}
 
 
 // const lsFunctions = document.querySelector<HTMLButtonElement>("#ts-functions");
@@ -21,6 +27,12 @@ const lsLoops = document.querySelector<HTMLButtonElement>("#ts-loops");
 
 
 lsEinfuehrung?.addEventListener('click', ()=>{
+  if(fieldsethidden){
+    fieldsethidden.style.display = "none";
+
+    
+  }
+  
 
   if(outputDiv){
 
@@ -46,6 +58,13 @@ history.go(0); // Lädt die Seite neu
 
 lsLoops?.addEventListener('click', ()=>{
 
+
+  if(fieldsethidden){
+    fieldsethidden.style.display = "block";
+    fieldsethidden.style.margin= "30px 0";
+    
+  }
+  
   if(outputDiv){
 
   outputDiv.innerHTML = `<h3>Loops</h3> <br><button id="back" class="hidden">Reset</button> <br> <hr style="width: 100%">`;
@@ -54,7 +73,7 @@ lsLoops?.addEventListener('click', ()=>{
 
 
   if(backButton){
-    setTimeout(() => backButton.classList.add("show"), 150);
+    setTimeout(() => backButton.classList.add("show"), 50);
   setTimeout(()=> outputDiv.classList.add("show"), 150);
   if (consoleDiv){
   setTimeout(()=> consoleDiv.classList.add("show"), 150);

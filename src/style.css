@@ -219,6 +219,7 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+  
 }
 button:hover::after, button:focus::after{
   animation: sheen 0.9s forwards;
@@ -228,6 +229,27 @@ button:hover::after, button:focus::after{
     transform: rotateZ(30deg) translate(0.9em, -9em);
   }
 }
+
+
+.loop-me{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  
+}
+
+fieldset input{
+  min-height: 5vw;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 @media (prefers-color-scheme: light) {
