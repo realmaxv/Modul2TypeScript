@@ -168,7 +168,7 @@ button {
   cursor: pointer;
   transition: border-color 0.5s;
   text-align: center;
-  min-width: 15vw;
+  min-width: 10vw;
   padding: 20px;
   transition: all 0.5s;
   position: relative;
@@ -201,7 +201,7 @@ button::after{
   color: lime;
   font-family: monospace;
   padding: 10px;
-  max-height: 400px;
+  max-height: 20vw;
 
   overflow-y: scroll;
   scroll-behavior: smooth;
