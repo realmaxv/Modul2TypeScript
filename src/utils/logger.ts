@@ -1,7 +1,7 @@
 // src/utils/logger.ts
 const consoleDiv = document.querySelector<HTMLDivElement>(".consoleOutput");
 export function selfConsole(...args: any[]) {
-    const message = args.map(arg => typeof arg === "object" ? JSON.stringify(arg, null, 2) : arg).join(" ");
+    const message = args.map(arg => typeof arg === "object" ? JSON.stringify(arg, null, 2) : arg).join(" \n");
     if(consoleDiv){
     consoleDiv.innerHTML += `<div>${message}</div>`;
     consoleDiv.scrollTop = consoleDiv.scrollHeight; // Automatisch nach unten scrollen
