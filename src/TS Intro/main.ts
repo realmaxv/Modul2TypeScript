@@ -90,4 +90,5 @@ export function sayHello() {
   selfConsole(result1);
 
   selfConsole("Rest: ", result % result1);
+  selfConsole("demo-branch");
 }
