@@ -1,63 +1,46 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   
-   
+    <link rel="stylesheet" href="./src/style.css" />
     <title>SuperCode - TypeScript</title>
   </head>
   <body>
     <div class="main">
-<header>
-  <div class="mainCenter">
-    <h1 class="theme">Modul 2 - Typescript</h1>
-    <h2>Übungen</h2>
-    <div class="log">
-      
- 
-      <fieldset class="loop-me none">
-        <input placeholder="Gib eine Zahl ein..." type="text" name="eingabe" id="eingabe"><button id="submit">Loop ME</button>
+      <header>
+        <div class="mainCenter">
+          <h1 class="theme">Modul 2 - Typescript</h1>
+          <h2>Übungen</h2>
+          <div class="log">
+            <fieldset class="loop-me none">
+              <input
+                placeholder="Gib eine Zahl ein..."
+                type="text"
+                name="eingabe"
+                id="eingabe"
+              /><button id="submit">Loop ME</button>
+            </fieldset>
+            <div id="consoleOutput" class="consoleOutput hidden"></div>
+            <div class="output hidden"></div>
+          </div>
+        </div>
+      </header>
 
-      </fieldset>
-      <div id="consoleOutput" class="consoleOutput hidden">
+      <ul class="listItems">
+        <li><button id="ts-loops">Loops</button></li>
 
-
-
-      </div>
-      <div class="output hidden"></div>
- 
-
-
+        <li><button disabled id="ts-arrays2">Arrays II</button></li>
+        <li><button disabled id="ts-arrays">Arrays I</button></li>
+        <li><button disabled id="ts-events">Events</button></li>
+        <li><button disabled id="ts-forms">Forms</button></li>
+        <li><button id="ts-functions">Functions I</button></li>
+        <li><button id="ts-Einführung">TypeScript Intro</button></li>
+      </ul>
     </div>
- </div> 
 
-</header>
-   
-    
-     
-        <ul class="listItems">
-          <li><button id="ts-loops">Loops</button></li>
-
-          <li><button disabled id="ts-arrays2">Arrays II</button></li>
-          <li><button disabled id="ts-arrays">Arrays I</button></li>
-          <li><button disabled id="ts-events">Events</button></li>
-          <li><button disabled id="ts-forms">Forms</button></li>
-          <li><button disabled id="ts-functions">Functions I</button></li>
-          <li><button id="ts-Einführung">TypeScript Intro</button></li>
-
-        
-        </ul>
-       
-
-
-  </div>
-
-
-   
     <script type="module" src="./src/main.ts"></script>
     <!-- <script type="module" src="./src/utils/logger.ts"></script> -->
-    
   </body>
 </html>

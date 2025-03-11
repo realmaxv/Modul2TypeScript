@@ -1,115 +1,100 @@
-import './style.css';
-import '../src/utils/logger.ts';
-// import * as FunctionsPartI from './Functions/main.ts';
+import "./style.css";
+import "../src/utils/logger.ts";
+import * as FunctionsPartI from "./Functions/main.ts";
 // import * as Forms from './Forms/main.ts';
 // import * as EventsOne from './Events/main.ts';
 // import * as ArraysIModule from './Arrays /main.ts';
 // import * as ArraysIIModule from './Arrays II/main.ts';
-import * as TsIntro from './TS Intro/main.ts';
-import * as Loops from './Loops/main.ts';
+import * as TsTIntro from "./TS Intro/main.ts";
+import * as Loops from "./Loops/main.ts";
 
 const consoleDiv = document.querySelector<HTMLDivElement>(".consoleOutput");
-const outputDiv = document.querySelector<HTMLDivElement>('.output');
-const lsEinfuehrung = document.querySelector<HTMLButtonElement>("#ts-Einführung");
+const outputDiv = document.querySelector<HTMLDivElement>(".output");
+const lsEinfuehrung =
+  document.querySelector<HTMLButtonElement>("#ts-Einführung");
 const lsLoops = document.querySelector<HTMLButtonElement>("#ts-loops");
 let fieldsethidden = document.querySelector<HTMLDivElement>(".none");
 
-if(fieldsethidden){
+if (fieldsethidden) {
   fieldsethidden.style.display = "none";
 }
 
-
-// const lsFunctions = document.querySelector<HTMLButtonElement>("#ts-functions");
+const lsFunctions = document.querySelector<HTMLButtonElement>("#ts-functions");
 // const lsForms = document.querySelector<HTMLButtonElement>("#ts-forms");
 // const lsEvents = document.querySelector<HTMLButtonElement>("#ts-events");
 // const lsArrays= document.querySelector<HTMLButtonElement>("#ts-arrays");
 // const lsArrays2= document.querySelector<HTMLButtonElement>("#ts-arrays2");
+console.log("test");
 
-
-lsEinfuehrung?.addEventListener('click', ()=>{
-  if(fieldsethidden){
+lsEinfuehrung?.addEventListener("click", () => {
+  if (fieldsethidden) {
     fieldsethidden.style.display = "none";
-
-    
   }
-  
 
-  if(outputDiv){
+  if (outputDiv) {
+    outputDiv.innerHTML = `<h3>TS Intro</h3><br><button id="back" class="hidden">Reset</button> <br> <hr style="width: 100%">`;
+    const backButton = document.getElementById("back");
+    TsTIntro.sayHello();
 
-  outputDiv.innerHTML = `<h3>TS Intro</h3><br><button id="back" class="hidden">Reset</button> <br> <hr style="width: 100%">`;
-  const backButton = document.getElementById("back");
-    TsIntro.sayHello();
-
-
-  if(backButton){
-    setTimeout(() => backButton.classList.add("show"), 50);
-  setTimeout(()=> outputDiv.classList.add("show"), 150);
-  if (consoleDiv){
-  setTimeout(()=> consoleDiv.classList.add("show"), 150);
+    if (backButton) {
+      setTimeout(() => backButton.classList.add("show"), 50);
+      setTimeout(() => outputDiv.classList.add("show"), 150);
+      if (consoleDiv) {
+        setTimeout(() => consoleDiv.classList.add("show"), 150);
+      }
+      backButton.addEventListener("click", () => {
+        history.go(0); // Lädt die Seite neu
+      });
+    }
   }
-  backButton.addEventListener("click", () => {
-    
-
-history.go(0); // Lädt die Seite neu
-});}
-  
-}
 });
 
-lsLoops?.addEventListener('click', ()=>{
-
-
-  if(fieldsethidden){
+lsLoops?.addEventListener("click", () => {
+  if (fieldsethidden) {
     fieldsethidden.style.display = "block";
-    fieldsethidden.style.margin= "30px 0";
-    
+    fieldsethidden.style.margin = "30px 0";
   }
-  
-  if(outputDiv){
 
-  outputDiv.innerHTML = `<h3>Loops</h3> <br><button id="back" class="hidden">Reset</button> <br> <hr style="width: 100%">`;
-  const backButton = document.getElementById("back");
+  if (outputDiv) {
+    outputDiv.innerHTML = `<h3>Loops</h3> <br><button id="back" class="hidden">Reset</button> <br> <hr style="width: 100%">`;
+    const backButton = document.getElementById("back");
     Loops.sayHello();
 
-
-  if(backButton){
-    setTimeout(() => backButton.classList.add("show"), 50);
-  setTimeout(()=> outputDiv.classList.add("show"), 150);
-  if (consoleDiv){
-  setTimeout(()=> consoleDiv.classList.add("show"), 150);
+    if (backButton) {
+      setTimeout(() => backButton.classList.add("show"), 50);
+      setTimeout(() => outputDiv.classList.add("show"), 150);
+      if (consoleDiv) {
+        setTimeout(() => consoleDiv.classList.add("show"), 150);
+      }
+      backButton.addEventListener("click", () => {
+        history.go(0); // Lädt die Seite neu
+      });
+    }
   }
-  backButton.addEventListener("click", () => {
-    
-
-history.go(0); // Lädt die Seite neu
-});}
-  
-}
 });
 
+lsFunctions?.addEventListener("click", () => {
+  if (fieldsethidden) {
+    fieldsethidden.style.display = "none";
+  }
 
+  if (outputDiv) {
+    outputDiv.innerHTML = `<h3>TS Intro</h3><br><button id="back" class="hidden">Reset</button> <br> <hr style="width: 100%">`;
+    const backButton = document.getElementById("back");
+    FunctionsPartI.sayHello();
 
-
-// lsFunctions?.addEventListener('click', ()=>{
-
-//   if(outputDiv){
-//    outputDiv.innerHTML = `<h3>Functions</h3> <br><button id="back" class="hidden">Reset</button> <br> <hr style="width: 100%">`;
-
-//   const backButton = document.getElementById("back");
- 
-//   if(backButton){
-//     setTimeout(() => backButton.classList.add("show"), 250);
-//   setTimeout(()=> outputDiv.classList.add("show"), 150);
-
-//   backButton.addEventListener("click", () => {
-    
-
-// history.go(0); // Lädt die Seite neu
-// });}
-  
-// }
-// });
-
+    if (backButton) {
+      setTimeout(() => backButton.classList.add("show"), 50);
+      setTimeout(() => outputDiv.classList.add("show"), 150);
+      if (consoleDiv) {
+        setTimeout(() => consoleDiv.classList.add("show"), 150);
+      }
+      backButton.addEventListener("click", () => {
+        history.go(0); // Lädt die Seite neu
+      });
+    }
+  }
+});
 
 // lsForms?.addEventListener('click', ()=>{
 
@@ -117,17 +102,16 @@ history.go(0); // Lädt die Seite neu
 //    outputDiv.innerHTML = `<h3>Forms</h3> <br><button id="back" class="hidden">Reset</button> <br> <hr style="width: 100%">`;
 
 //   const backButton = document.getElementById("back");
- 
+
 //   if(backButton){
 //     setTimeout(() => backButton.classList.add("show"), 250);
 //   setTimeout(()=> outputDiv.classList.add("show"), 150);
 
 //   backButton.addEventListener("click", () => {
-    
 
 // history.go(0); // Lädt die Seite neu
 // });}
-  
+
 // }
 // });
 
@@ -137,17 +121,16 @@ history.go(0); // Lädt die Seite neu
 //    outputDiv.innerHTML = `<h3>Events</h3> <br><button id="back" class="hidden">Reset</button> <br> <hr style="width: 100%">`;
 
 //   const backButton = document.getElementById("back");
- 
+
 //   if(backButton){
 //     setTimeout(() => backButton.classList.add("show"), 250);
 //   setTimeout(()=> outputDiv.classList.add("show"), 150);
 
 //   backButton.addEventListener("click", () => {
-    
 
 // history.go(0); // Lädt die Seite neu
 // });}
-  
+
 // }
 // });
 
@@ -157,17 +140,16 @@ history.go(0); // Lädt die Seite neu
 //    outputDiv.innerHTML = `<h3>Arrays I</h3> <br><button id="back" class="hidden">Reset</button> <br> <hr style="width: 100%">`;
 
 //   const backButton = document.getElementById("back");
- 
+
 //   if(backButton){
 //     setTimeout(() => backButton.classList.add("show"), 250);
 //   setTimeout(()=> outputDiv.classList.add("show"), 150);
 
 //   backButton.addEventListener("click", () => {
-    
 
 // history.go(0); // Lädt die Seite neu
 // });}
-  
+
 // }
 // });
 
@@ -179,15 +161,14 @@ history.go(0); // Lädt die Seite neu
 //   const backButton = document.getElementById("back");
 
 //   if(backButton){
- 
+
 //     setTimeout(() => backButton.classList.add("show"), 250);
 //   setTimeout(()=> outputDiv.classList.add("show"), 150);
 
 //   backButton.addEventListener("click", () => {
-    
 
 // history.go(0); // Lädt die Seite neu
 // });}
-  
+
 // }
 // });

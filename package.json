@@ -14,6 +14,11 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.0.8",
-    "tailwindcss": "^4.0.8"
+    "@types/lodash": "^4.17.16",
+    "date-fns": "^4.1.0",
+    "openai": "^4.86.2",
+    "schummar-translate": "^1.22.1",
+    "tailwindcss": "^4.0.8",
+    "translate": "^3.0.1"
   }
 }

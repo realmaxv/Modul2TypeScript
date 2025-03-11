@@ -1,15 +1,7 @@
+import { selfConsole, overrideConsole } from "../utils/logger";
+overrideConsole();
+export function sayHello() {
+  selfConsole("test");
 
-export function sayHello (){
-
-
-
-
-
-
-    console.log("finish 😎");
-    
-
-
-   return 'Öffne die Konsole, um die Ausgabe der ausgeführten Aufgaben zu sehen 😇';
-
-};
+  console.log("finish 😎");
+}
